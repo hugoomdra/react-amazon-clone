@@ -3,7 +3,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import Currency from 'react-currency-formatter'
 
-function Product({id, title, price, description, category, thumbnail}) {
+function Product({id, title, price, description, category, image}) {
 
     const [rating] = useState(Math.floor(Math.random() * (5 - 1 + 1)) + 1);
 
@@ -16,7 +16,7 @@ function Product({id, title, price, description, category, thumbnail}) {
     <div className='relative flex flex-col m-5 bg-white z-30 p-10'>
         <p className='absolute top-2 right-2 text-xs italic text-gray-400'>{category}</p>
 
-        <Image src={thumbnail} height={200} width={200} objectFit='cover'>
+        <Image src={image} height={200} width={200} objectFit='contain'>
         </Image>
 
         <h4 className='my-3'>{title}</h4>

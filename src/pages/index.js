@@ -26,12 +26,12 @@ export default function Home({ products }) {
 
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://dummyjson.com/products`)
+  const res = await fetch(`https://fakestoreapi.com/products`)
   const data = await res.json()
   // const products = await (await (fetch('https://dummyjson.com/products'))).json()
   return {
     props: {
-      products: data.products,
+      products: data,
     }, // will be passed to the page component as props
   }
 }

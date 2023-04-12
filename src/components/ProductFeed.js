@@ -7,7 +7,7 @@ function ProductFeed({products}) {
 
       {products
       .slice(0,4)
-      .map(({id, title, price, description, category, thumbnail}) => (
+      .map(({id, title, price, description, category, image}) => (
         <Product
           key={id}
           id={id}
@@ -15,7 +15,7 @@ function ProductFeed({products}) {
           price={price}
           description={description}
           category={category}
-          thumbnail={thumbnail}
+          image={image}
         ></Product>
       ))}
 
@@ -24,7 +24,7 @@ function ProductFeed({products}) {
       <div className='md:col-span-2'>
       {products
       .slice(4,5)
-      .map(({id, title, price, description, category, thumbnail}) => (
+      .map(({id, title, price, description, category, image}) => (
         <Product
           key={id}
           id={id}
@@ -32,14 +32,14 @@ function ProductFeed({products}) {
           price={price}
           description={description}
           category={category}
-          thumbnail={thumbnail}
+          image={image}
         ></Product>
       ))}
       </div>
 
       {products
       .slice(5,products.length)
-      .map(({id, title, price, description, category, thumbnail}) => (
+      .map(({id, title, price, description, category, image}) => (
         <Product
           key={id}
           id={id}
@@ -47,7 +47,7 @@ function ProductFeed({products}) {
           price={price}
           description={description}
           category={category}
-          thumbnail={thumbnail}
+          image={image}
         ></Product>
       ))}
     </div>
